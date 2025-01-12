@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "The Gourmet Kitchen",
+        "description": "A cozy spot serving international cuisines with locally sourced ingredients.",
+        "rating": 4.5,
+        "address": "123 Main Street, Cityville",
+        "image": "https://via.placeholder.com/150?text=Gourmet+Kitchen"
+    },
+    {
+        "id": 2,
+        "name": "Pasta Paradise",
+        "description": "Authentic Italian dishes with handmade pasta and traditional recipes.",
+        "rating": 4.7,
+        "address": "456 Elm Street, Townsville",
+        "image": "https://via.placeholder.com/150?text=Pasta+Paradise"
+    },
+    {
+        "id": 3,
+        "name": "Spice Symphony",
+        "description": "A vibrant eatery offering a mix of Indian and Southeast Asian flavors.",
+        "rating": 4.6,
+        "address": "789 Oak Avenue, Metropolis",
+        "image": "https://via.placeholder.com/150?text=Spice+Symphony"
+    },
+    {
+        "id": 4,
+        "name": "Burger Barn",
+        "description": "Juicy burgers, crispy fries, and refreshing milkshakes in a casual setting.",
+        "rating": 4.3,
+        "address": "101 Pine Road, Foodie Town",
+        "image": "https://via.placeholder.com/150?text=Burger+Barn"
+    },
+    {
+        "id": 5,
+        "name": "Sushi Spot",
+        "description": "Fresh sushi, sashimi, and rolls crafted by expert chefs.",
+        "rating": 4.8,
+        "address": "202 Maple Lane, Sushi City",
+        "image": "https://via.placeholder.com/150?text=Sushi+Spot"
+    },
+    {
+        "id": 6,
+        "name": "Steakhouse Supreme",
+        "description": "Premium steaks grilled to perfection in an upscale environment.",
+        "rating": 4.4,
+        "address": "303 Cedar Blvd, Steakville",
+        "image": "https://via.placeholder.com/150?text=Steakhouse+Supreme"
+    },
+    {
+        "id": 7,
+        "name": "Vegan Vibes",
+        "description": "Plant-based dishes that are healthy, sustainable, and delicious.",
+        "rating": 4.5,
+        "address": "404 Willow Street, Green City",
+        "image": "https://via.placeholder.com/150?text=Vegan+Vibes"
+    },
+    {
+        "id": 8,
+        "name": "Cafe Delight",
+        "description": "An all-day cafe offering artisanal coffee and freshly baked pastries.",
+        "rating": 4.2,
+        "address": "505 Birch Drive, Cafe Town",
+        "image": "https://via.placeholder.com/150?text=Cafe+Delight"
+    },
+    {
+        "id": 9,
+        "name": "Taco Fiesta",
+        "description": "Mexican street food with a modern twist, including tacos, burritos, and more.",
+        "rating": 4.6,
+        "address": "606 Spruce Court, Taco City",
+        "image": "https://via.placeholder.com/150?text=Taco+Fiesta"
+    },
+    {
+        "id": 10,
+        "name": "Dessert Dreams",
+        "description": "Indulge in decadent desserts, cakes, and sweet treats.",
+        "rating": 4.9,
+        "address": "707 Aspen Lane, Sweetville",
+        "image": "https://via.placeholder.com/150?text=Dessert+Dreams"
+    }
+]
