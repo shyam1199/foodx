@@ -3,7 +3,7 @@ import { RestaurantCard } from '.'
 
 const RestaurantContainer = ({ title, resData }) => {
   return (
-    <div className='w-10/12 mx-auto my-4'>
+    <div className='w-10/12 mx-auto my-24'>
       <div className='mx-4 text-2xl font-bold'>{title}</div>
       <div className='flex flex-wrap '>
         {
