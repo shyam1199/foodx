@@ -9,7 +9,7 @@ const Footer = () => {
                 <div>Privacy Policy</div>
                 <div>Terms of Service</div>
             </div>
-            <div class="text-sm text-center p-4">
+            <div className="text-sm text-center p-4">
                 © 2025 FoodX. All Rights Reserved.
             </div>
         </footer>

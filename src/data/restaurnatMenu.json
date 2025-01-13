@@ -1,0 +1,114 @@
+[
+    {
+        "category": "Recommended",
+        "items": [
+            {
+                "name": "Combo for 1 Non-Veg",
+                "type": "Non-Veg",
+                "price": 379,
+                "rating": 4.2,
+                "reviews": 10,
+                "description": "Serves 1 | Combo for one (Rice/Noodle Bowl with choice of Non-Veg Gravy, Non-Veg Momos & Drinks)",
+                "image": "http://localhost:5173/item.png",
+                "customizable": true
+            },
+            {
+                "name": "Combo for 1 Veg",
+                "type": "Veg",
+                "price": 359,
+                "rating": 4.2,
+                "reviews": 33,
+                "description": "Serves 1 | Combo for one (Rice/Noodle Bowl with choice of Veg Gravy, Veg Momos & Drinks)",
+                "image": "http://localhost:5173/item.png",
+                "customizable": true
+            },
+            {
+                "name": "Hunan Paneer Dry",
+                "type": "Veg",
+                "price": 199,
+                "original_price": 369,
+                "rating": 3.8,
+                "reviews": 5,
+                "description": "Serves 1 | (Spicy) Cubes Of Paneer, Onion, Capsicum Tossed With Spicy & Savory flavors of Hunan Sauce.",
+                "image": "http://localhost:5173/item.png",
+                "customizable": true,
+                "offer": "Get undefined"
+            }
+        ]
+    },
+    {
+        "category": "Starters",
+        "items": [
+            {
+                "name": "Chicken Lollipop",
+                "type": "Non-Veg",
+                "price": 299,
+                "rating": 4.5,
+                "reviews": 20,
+                "description": "Crispy fried chicken wings coated in spicy batter, served with tangy dip.",
+                "image": "http://localhost:5173/item.png",
+                "customizable": false
+            },
+            {
+                "name": "Spring Rolls",
+                "type": "Veg",
+                "price": 149,
+                "rating": 4.0,
+                "reviews": 15,
+                "description": "Crispy rolls filled with stir-fried vegetables and noodles.",
+                "image": "http://localhost:5173/item.png",
+                "customizable": false
+            }
+        ]
+    },
+    {
+        "category": "Main Course",
+        "items": [
+            {
+                "name": "Butter Chicken",
+                "type": "Non-Veg",
+                "price": 399,
+                "rating": 4.8,
+                "reviews": 50,
+                "description": "Classic Indian curry with tender chicken cooked in a creamy tomato gravy.",
+                "image": "http://localhost:5173/item.png",
+                "customizable": false
+            },
+            {
+                "name": "Paneer Butter Masala",
+                "type": "Veg",
+                "price": 299,
+                "rating": 4.6,
+                "reviews": 40,
+                "description": "Soft paneer cubes cooked in rich and creamy butter masala.",
+                "image": "http://localhost:5173/item.png",
+                "customizable": false
+            }
+        ]
+    },
+    {
+        "category": "Desserts",
+        "items": [
+            {
+                "name": "Gulab Jamun",
+                "type": "Veg",
+                "price": 99,
+                "rating": 4.7,
+                "reviews": 25,
+                "description": "Soft and spongy dumplings soaked in sugar syrup, served warm.",
+                "image": "http://localhost:5173/item.png",
+                "customizable": false
+            },
+            {
+                "name": "Chocolate Brownie",
+                "type": "Veg",
+                "price": 149,
+                "rating": 4.3,
+                "reviews": 18,
+                "description": "Warm chocolate brownie topped with vanilla ice cream.",
+                "image": "http://localhost:5173/item.png",
+                "customizable": false
+            }
+        ]
+    }
+]
