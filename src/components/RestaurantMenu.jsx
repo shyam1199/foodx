@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import menuData from "../data/restaurnatMenu.json"
 import { MenuAccordion } from '.';
+import { useParams } from 'react-router-dom';
 
 const RestaurantMenu = () => {
     const [menu, setMenu] = useState();
     const [visibleCategory, setVisibleCategory] = useState(0);
+    const { restaurantId } = useParams()
     useEffect(() => {
         setTimeout(() => { setMenu(menuData) }, 1000)
     }, [])
@@ -13,7 +15,17 @@ const RestaurantMenu = () => {
 
     return (
         <div className='w-5/12 mx-auto'>
-            {menu.map((category, index) => (<MenuAccordion {...category} key={index} index={index} visibleCategory={visibleCategory} setVisibleCategory={setVisibleCategory} />))}
+            {
+                menu.map((category, index) => (
+                    <MenuAccordion
+                        key={index}
+                        {...category}
+                        index={index}
+                        visibleCategory={visibleCategory}
+                        setVisibleCategory={setVisibleCategory}
+                        restaurantId={restaurantId}
+                    />))
+            }
         </div>
     )
 }
