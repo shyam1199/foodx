@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { ContactUs, Home, FoodDelivery, RestaurantMenu } from "./components"
+import { ContactUs, Home, FoodDelivery, RestaurantMenu, Cart } from "./components"
 import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
@@ -17,6 +17,7 @@ createRoot(document.getElementById('root')).render(
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/food-delivery" element={<FoodDelivery />} />
             <Route path="/restaurant-menu/:restaurantId" element={<RestaurantMenu />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
         </Routes>
       </BrowserRouter>

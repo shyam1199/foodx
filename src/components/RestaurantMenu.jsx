@@ -8,7 +8,7 @@ const RestaurantMenu = () => {
     const [visibleCategory, setVisibleCategory] = useState(0);
     const { restaurantId } = useParams()
     useEffect(() => {
-        setTimeout(() => { setMenu(menuData) }, 1000)
+        setTimeout(() => { setMenu(menuData) }, 100)
     }, [])
 
     if (!menu) return <div>Shimmer Menu</div>

@@ -6,7 +6,7 @@ const FoodDelivery = () => {
   const [resData, setResData] = useState();
 
   useEffect(() => {
-    setTimeout(() => { setResData(resList) }, 1000)
+    setTimeout(() => { setResData(resList) }, 100)
   }, [])
 
   if (!resData?.length) return <div>ShimmerUI</div>

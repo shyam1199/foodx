@@ -8,5 +8,10 @@ import RestaurantCard from './RestaurantCard'
 import RestaurantMenu from "./RestaurantMenu";
 import MenuAccordion from "./MenuAccordion";
 import MenuItem from "./MenuItem";
+import Cart from "./Cart";
 
-export { Header, Footer, Home, FoodDelivery, ContactUs, RestaurantContainer, RestaurantCard, RestaurantMenu, MenuAccordion, MenuItem }
+
+export {
+    Header, Footer, Home, FoodDelivery, ContactUs, RestaurantContainer,
+    RestaurantCard, RestaurantMenu, MenuAccordion, MenuItem, Cart
+}
