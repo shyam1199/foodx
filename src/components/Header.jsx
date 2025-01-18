@@ -16,7 +16,8 @@ const Header = () => {
                 <div className='cursor-pointer hover'>
                     <Link to="/cart"> 🛒 Cart{cartItemsCount ? `(${cartItemsCount})` : ""}</Link>
                 </div>
-                <div className='hover: cursor-pointer'>👨🏻‍💼 Sign In</div>
+
+                <Link to="/login" className='hover: cursor-pointer'>👨🏻‍💼 Sign In</Link>
             </div>
         </header>
 

@@ -10,7 +10,7 @@
                 "rating": 4.2,
                 "reviews": 10,
                 "description": "Serves 1 | Combo for one (Rice/Noodle Bowl with choice of Non-Veg Gravy, Non-Veg Momos & Drinks)",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": true
             },
             {
@@ -21,7 +21,7 @@
                 "rating": 4.2,
                 "reviews": 33,
                 "description": "Serves 1 | Combo for one (Rice/Noodle Bowl with choice of Veg Gravy, Veg Momos & Drinks)",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": true
             },
             {
@@ -33,7 +33,7 @@
                 "rating": 3.8,
                 "reviews": 5,
                 "description": "Serves 1 | (Spicy) Cubes Of Paneer, Onion, Capsicum Tossed With Spicy & Savory flavors of Hunan Sauce.",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": true,
                 "offer": "Get undefined"
             }
@@ -50,7 +50,7 @@
                 "rating": 4.5,
                 "reviews": 20,
                 "description": "Crispy fried chicken wings coated in spicy batter, served with tangy dip.",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": false
             },
             {
@@ -61,7 +61,7 @@
                 "rating": 4.0,
                 "reviews": 15,
                 "description": "Crispy rolls filled with stir-fried vegetables and noodles.",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": false
             }
         ]
@@ -77,7 +77,7 @@
                 "rating": 4.8,
                 "reviews": 50,
                 "description": "Classic Indian curry with tender chicken cooked in a creamy tomato gravy.",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": false
             },
             {
@@ -88,7 +88,7 @@
                 "rating": 4.6,
                 "reviews": 40,
                 "description": "Soft paneer cubes cooked in rich and creamy butter masala.",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": false
             }
         ]
@@ -104,7 +104,7 @@
                 "rating": 4.7,
                 "reviews": 25,
                 "description": "Soft and spongy dumplings soaked in sugar syrup, served warm.",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": false
             },
             {
@@ -115,7 +115,7 @@
                 "rating": 4.3,
                 "reviews": 18,
                 "description": "Warm chocolate brownie topped with vanilla ice cream.",
-                "image": "http://localhost:5173/item.png",
+                "image": "https://foodx-63155.web.app/item.png",
                 "customizable": false
             }
         ]

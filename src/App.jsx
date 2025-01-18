@@ -3,9 +3,9 @@ import { Footer, Header } from "./components"
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="mt-24">
+      <main className="mt-24 flex-grow">
         <Outlet />
       </main>
       <Footer />
