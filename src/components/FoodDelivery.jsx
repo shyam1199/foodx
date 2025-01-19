@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import resList from "../data/restaurantList.json"
 import RestaurantContainer from './RestaurantContainer';
+import { getRestaurantList } from '../backend/services/restaurant';
 
 const FoodDelivery = () => {
   const [resData, setResData] = useState();
 
   useEffect(() => {
-    setTimeout(() => { setResData(resList) }, 100)
+    getRestaurantList().then(data => { setResData(data) });
   }, [])
 
   if (!resData?.length) return <div>ShimmerUI</div>

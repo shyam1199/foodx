@@ -11,7 +11,7 @@ const MenuItem = ({ restaurantId, id, name, type, price, rating, reviews, descri
     const removeItemFromCart = () => {
         dispatch(removeFromCart(id))
     }
-    const itemIdsMap = useSelector((state) => state.cart.itemIdsMap);
+    const cart = useSelector((state) => state.cart);
 
     return (
         <div className='flex justify-between p-2 border-b-2 border-gray'>
@@ -25,10 +25,10 @@ const MenuItem = ({ restaurantId, id, name, type, price, rating, reviews, descri
                 <img className='w-full rounded-lg' alt='Item Image' src={image} />
                 <div className='absolute w-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs font-semibold shadow-lg bg-white text-green-800 py-1 rounded-md text-center'>
                     {
-                        itemIdsMap[id] ?
+                        cart.itemIdsMap[id] && cart.resId == restaurantId ?
                             <div>
                                 <button className='pr-2' onClick={addItemToCart}>➕</button>
-                                {itemIdsMap[id]}
+                                {cart.itemIdsMap[id]}
                                 <button className='pl-2' onClick={removeItemFromCart}>➖</button>
                             </div>
                             :

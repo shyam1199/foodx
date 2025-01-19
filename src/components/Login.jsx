@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { createUserAccount, userLogin } from '../backend/services/auth';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from "../reducers/userSlice.js";
 
 const Login = () => {
   const [signIn, setSignIn] = useState(true);
@@ -8,21 +10,29 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
+  const dispatch = useDispatch()
   const navigate = useNavigate();
-
+  const userInfo = useSelector((state) => state.user)
   useEffect(() => {
     setError(null)
   }, [email, password])
+
+  useEffect(() => {
+    if (Object.keys(userInfo).length) {
+      navigate('/food-delivery')
+    }
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!signIn) {
       const { error } = await createUserAccount(email, password)
       if (error) return setError(error)
+      navigate('/food-delivery')
     } else {
       const { error } = await userLogin(email, password)
       if (error) return setError(error)
-
+      dispatch(login({ name: email }))
       navigate('/food-delivery')
     }
   }

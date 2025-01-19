@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
-import menuData from "../data/restaurnatMenu.json"
 import { MenuAccordion } from '.';
 import { useParams } from 'react-router-dom';
+import { getMenuList } from '../backend/services/restaurant';
 
 const RestaurantMenu = () => {
     const [menu, setMenu] = useState();
     const [visibleCategory, setVisibleCategory] = useState(0);
     const { restaurantId } = useParams()
     useEffect(() => {
-        setTimeout(() => { setMenu(menuData) }, 100)
+        getMenuList(restaurantId).then((data) => { setMenu(data)})
     }, [])
 
     if (!menu) return <div>Shimmer Menu</div>

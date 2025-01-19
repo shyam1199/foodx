@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useCartDetails from '../hooks/userCartDetails'
 import { useDispatch, } from 'react-redux'
 import { addToCart, clearCart, removeFromCart } from '../reducers/cartSlice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-    const { resDetails, itemDetails } = useCartDetails();
+    const [details, setDetails] = useState();
+    useCartDetails(setDetails);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    if (!resDetails || !itemDetails) return;
+    if (!details || !details.resDetails || !details.itemDetails) return;
+    const { resDetails, itemDetails } = details;
+
     let totalPrice = itemDetails.reduce((acc, cur) => acc + cur.price * cur.quantity, 0);
 
     const addItemToCart = (id) => {
@@ -30,9 +34,9 @@ const Cart = () => {
             <div className="p-4">
                 <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
                 <div className='flex border-b border-t'>
-                    <div className='w-2/12 mt-4 mb-4 p-1'>
+                    <Link to={"/restaurant-menu/" + resDetails.id} className='w-2/12 mt-4 mb-4 p-1'>
                         <img className="w-full" alt='Restaurnt Logo' src={resDetails.image} />
-                    </div>
+                    </Link>
                     <div className="w-11/12  content-center p-4">
                         <h3 className="text-lg font-semibold">{resDetails.name}</h3>
                         <p className="text-sm text-gray-600">{resDetails.address}</p>
