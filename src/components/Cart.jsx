@@ -12,7 +12,7 @@ const Cart = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    if (!details || !details.resDetails || !details.itemDetails) return;
+    if (!details || !details.resDetails || !details.itemDetails || !cart.resId) return;
     const { resDetails, itemDetails } = details;
     itemDetails.map((item) => { item.quantity = cart.itemIdsMap[item.id] })
 
@@ -48,7 +48,7 @@ const Cart = () => {
 
                 <div className="mb-4">
                     {
-                        itemDetails.map((item) => (<div className="w-full flex justify-between mb-2">
+                        itemDetails.map((item, index) => (<div key={index} className="w-full flex justify-between mb-2">
                             <span className='w-6/12 text-left'>{item.type == "Veg" ? "🥦" : "🍗"}{item.name}</span>
                             <span className='w-3/12 text-center rounded-lg'>
                                 <button className='pr-2' onClick={() => addItemToCart(item.id)}>➕</button>
