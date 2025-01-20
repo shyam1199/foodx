@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import useCartDetails from '../hooks/userCartDetails'
-import { useDispatch, } from 'react-redux'
+import { useDispatch, useSelector, } from 'react-redux'
 import { addToCart, clearCart, removeFromCart } from '../reducers/cartSlice';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const [details, setDetails] = useState();
+    const cart = useSelector((state) => state.cart);
     useCartDetails(setDetails);
 
     const dispatch = useDispatch();
@@ -13,6 +14,8 @@ const Cart = () => {
 
     if (!details || !details.resDetails || !details.itemDetails) return;
     const { resDetails, itemDetails } = details;
+    itemDetails.map((item) => { item.quantity = cart.itemIdsMap[item.id] })
+
 
     let totalPrice = itemDetails.reduce((acc, cur) => acc + cur.price * cur.quantity, 0);
 

@@ -15,7 +15,6 @@ const useCartDetails = async (setDetails) => {
                 return category.items.filter((item) => Object.keys(cart.itemIdsMap).includes(String(item.id)))
             }
         )
-        itemDetails.map((item) => { item.quantity = cart.itemIdsMap[item.id] })
         return { resDetails, itemDetails }
     }
 
