@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const useCartDetails = async (setDetails) => {
     const cart = useSelector((state) => state.cart)
 
-    useEffect(() => async () => {
+    const fetchDetails = async () => {
         if (!cart.resId) return;
         const restaurantList = await getRestaurantList()
         const restaurnatMenu = await getMenuList(cart.resId)
@@ -16,9 +16,13 @@ const useCartDetails = async (setDetails) => {
             }
         )
         itemDetails.map((item) => { item.quantity = cart.itemIdsMap[item.id] })
-        setDetails({ resDetails, itemDetails })
-    }, [cart]
-    )
+        return { resDetails, itemDetails }
+    }
+
+    useEffect(() => {
+        fetchDetails()
+            .then((data) => { setDetails(data) })
+    }, [])
 
 }
 export default useCartDetails
