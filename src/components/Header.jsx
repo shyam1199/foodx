@@ -38,7 +38,7 @@ const Header = () => {
                         </div>
                     </div>
                 ) : (
-                    <Link to="/login" className='cursor-pointer hover:text-purple-600'>
+                    <Link to="/login" className='cursor-pointer hover:text-purple-600 hidden sm:block'>
                         👨🏻‍💼 Sign In
                     </Link>
                 )}
