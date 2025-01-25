@@ -6,5 +6,6 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
+  esbuild: { legalComments: 'none' },
   plugins: [react()],
 })
