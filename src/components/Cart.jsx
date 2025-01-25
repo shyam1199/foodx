@@ -33,7 +33,7 @@ const Cart = () => {
         navigate("/food-delivery")
     }
     return (
-        <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="w-11/12 md:max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="p-4">
                 <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
                 <div className='flex border-b border-t'>
@@ -49,13 +49,13 @@ const Cart = () => {
                 <div className="mb-4">
                     {
                         itemDetails.map((item, index) => (<div key={index} className="w-full flex justify-between mb-2">
-                            <span className='w-6/12 text-left'>{item.type == "Veg" ? "🥦" : "🍗"}{item.name}</span>
+                            <span className='w-7/12 text-left'>{item.type == "Veg" ? "🥦" : "🍗"}{item.name}</span>
                             <span className='w-3/12 text-center rounded-lg'>
                                 <button className='pr-2' onClick={() => addItemToCart(item.id)}>➕</button>
                                 {item.quantity}
                                 <button className='pl-2' onClick={() => removeItemFromCart(item.id)}>➖</button>
                             </span>
-                            <span className='w-3/12 text-right'>₹{item.quantity * item.price}</span>
+                            <span className='w-2/12 text-right'>₹{item.quantity * item.price}</span>
                         </div>))
                     }
                 </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import RestaurantContainer from './RestaurantContainer';
+import { RestaurantContainer, RestaurantShimmerCard } from '.';
 import { getRestaurantList } from '../backend/services/restaurant';
 
 const FoodDelivery = () => {
@@ -9,7 +9,7 @@ const FoodDelivery = () => {
     getRestaurantList().then(data => { setResData(data) });
   }, [])
 
-  if (!resData?.length) return <div>ShimmerUI</div>
+  if (!resData?.length) return (<RestaurantShimmerCard />);
 
   return (
     <RestaurantContainer title={"Restaurants with online food delivery"} resData={resData} />

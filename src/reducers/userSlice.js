@@ -9,7 +9,7 @@ const userSlice = createSlice({
             return payload
         },
         logout: (state) => {
-            localStorage.removeItem("userData")
+            localStorage.clear();
             return {}
         }
     }

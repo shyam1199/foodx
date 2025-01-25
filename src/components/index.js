@@ -10,10 +10,13 @@ import MenuAccordion from "./MenuAccordion";
 import MenuItem from "./MenuItem";
 import Cart from "./Cart";
 import Login from "./Login";
+import RestaurantShimmerCard from "./RestaurantShimmerCard";
+import RestaurantShimmerMenu from "./RestaurantShimmerMenu";
 
 
 
 export {
     Header, Footer, Home, FoodDelivery, ContactUs, RestaurantContainer,
-    RestaurantCard, RestaurantMenu, MenuAccordion, MenuItem, Cart, Login
+    RestaurantCard, RestaurantMenu, MenuAccordion, MenuItem, Cart, Login,
+    RestaurantShimmerCard, RestaurantShimmerMenu
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({ name: '', email: '', details: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +18,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className='w-4/12 bg-white mx-auto shadow-lg p-6'>
+    <div className='w-11/12 md:w-4/12 bg-white mx-auto shadow-lg p-6'>
       <h2 className='text-2xl font-semibold text-center mb-6'>We'd Love to Hear from You</h2>
       <form className='' onSubmit={handleSubmit}>
         <div className="mb-4">
