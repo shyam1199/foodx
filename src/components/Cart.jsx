@@ -3,6 +3,7 @@ import useCartDetails from '../hooks/userCartDetails'
 import { useDispatch, useSelector, } from 'react-redux'
 import { addToCart, clearCart, removeFromCart } from '../reducers/cartSlice';
 import { Link, useNavigate } from 'react-router-dom';
+import { addOrder } from '../backend/services/order';
 
 const Cart = () => {
     const [details, setDetails] = useState();
@@ -27,10 +28,13 @@ const Cart = () => {
         dispatch(removeFromCart(id))
     }
 
-    const placeOrder = () => {
-        dispatch(clearCart())
-        alert("Order Placed")
-        navigate("/food-delivery")
+    const placeOrder = async () => {
+        const { error } = await addOrder(resDetails, itemDetails);
+        if (error) return alert(error);
+
+        dispatch(clearCart());
+        alert("Order Placed");
+        navigate("/food-delivery");
     }
     return (
         <div className="w-11/12 md:max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">

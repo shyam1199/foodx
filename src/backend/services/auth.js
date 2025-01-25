@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth"
 import { auth } from '../firebase'
 
 const createUserAccount = async (email, password) => {
@@ -26,7 +26,15 @@ const userLogin = async (email, password) => {
     } catch (err) {
         return { error: err.message || "Something Went Wrong!!" }
     }
-
 }
 
-export { createUserAccount, userLogin }
+const userLogout = async () => {
+    try {
+        await signOut(auth);
+        return { error: null }
+    } catch (err) {
+        return { error: err.message || "Something Went Wrong!!" }
+    }
+}
+
+export { createUserAccount, userLogin, userLogout }

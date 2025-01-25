@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { sendDetails } from '../backend/services/contact-us';
+import { useNavigate } from 'react-router-dom';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', email: '', details: '' });
+  const navigate = useNavigate();
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -11,10 +15,14 @@ const ContactUs = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const { error } = await sendDetails(formData);
+    if (error) return alert(error);
+
     setFormData({ name: '', email: '', details: '' });
-    alert('Form Submitted');
+    alert('Details Submitted');
+    navigate("/")
   };
 
   return (

@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useCartItemCount from '../hooks/useCartItemCount';
-import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../reducers/userSlice';
+import { useSelector } from 'react-redux';
+import { userLogout } from '../backend/services/auth';
 
 const Header = () => {
-    const dispatch = useDispatch();
     const cartItemsCount = useCartItemCount();
     const userInfo = useSelector((state) => state.user);
 
@@ -29,18 +28,24 @@ const Header = () => {
                         <span> {cartItemsCount ? `(${cartItemsCount})` : ""}</span>
                     </Link>
                 </div>
+                <div className='cursor-pointer'>
+                    <Link to="/order-history">
+                        <span>📜</span>
+                        <span className='px-2 md:h-full md:w-full hidden md:inline'>Order History</span>
+                    </Link>
+                </div>
 
                 {userInfo && userInfo.name ? (
                     <div className='relative group'>
                         <div className="text-gray-800 hover:text-purple-600">
                             <span>👨🏻‍💼</span>
-                            <span className='pl-2 md:h-full md:w-full hidden md:inline'>Sign Out</span>
+                            <span className='pl-2 md:h-full md:w-full hidden md:inline'>{userInfo.name}</span>
                         </div>
                         <div className="absolute shadow-lg mt-2 w-36 min-h-12 px-4 bg-white text-sm rounded-md opacity-0 group-hover:opacity-100">
                             <div className='my-2'>Hi, {userInfo.name}</div>
                             <button
                                 className="my-2 text-gray-700 hover:text-purple-600"
-                                onClick={() => dispatch(logout())}>
+                                onClick={userLogout}>
                                 🏃 Logout
                             </button>
                         </div>
